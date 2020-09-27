@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Vesper+Libre:wght@400;500;700;900&display=swap');
+body {
+    margin: 0;
+    font-family: 'Vesper Libre', serif;
+}
+
+#select {
+    background-color: #C1C3CA;
+    padding: 15px 15px;
+    margin-bottom: 15px;
+}
+
+#select h1 {
+    text-align: center;
+    font-size: 3em;
+    position: relative;
+}
+
+#select h1:after {
+    position: absolute;
+    content: '';
+    width: 65%;
+    text-align: center;
+    background-color: rgba(0, 0, 255, 0.548);
+    height: 2px;
+    left: 20%;
+    bottom: 0
+}
+
+select, label {
+    margin-left: 10%;
+}
+
+label {
+    font-size: 1.54rem;
+}
+
+select, button {
+    padding: 4px;
+    margin-top: 3px;
+    font-size: 1.25rem;
+}
+
+a {
+    color: #271D1A;
+}
+
+a:hover {
+    color: blue;
+}
+
+a:visited {
+    color: #8a6c94;
+}
+
+#displayArea {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-grow: 0;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    border: 1.4px solid black;
+    margin-top: 5px;
+}
+
+/* #region Story Card */
+
+/* setup grid so I can change the look and IA heirachy easy */
+
+.newsCard {
+    display: grid;
+    grid-template-areas: "img" "section" "title" "abstract" "byline" "date";
+    align-self: flex-start;
+    width: 350px;
+    min-width: 275px;
+    height: 550px;
+    padding: 5px 10px;
+    margin: 1.25rem 0.75rem;
+    background-color: #C1C3CA;
+    overflow: auto;
+    -webkit-box-shadow: 3px 3px 4px 5px rgb(46, 43, 43);
+    -moz-box-shadow: 3px 3px 4px 5px rgb(43, 39, 39);
+    box-shadow: 3px 3px 4px 5px rgb(34, 31, 31);
+}
+
+.newsTitle {
+    grid-area: title;
+    margin-top: -10px;
+}
+
+.newsImage {
+    grid-area: img;
+    text-align: center;
+}
+
+.newsSection {
+    grid-area: section;
+}
+
+.newsAbstract {
+    grid-area: abstract;
+    font-size: 1.3em;
+}
+
+.newsByline {
+    grid-area: byline;
+    text-decoration: underline;
+}
+
+.newsDate {
+    grid-area: date;
+}
+
+.newsSection p {
+    background-color: rgb(23, 63, 128);
+    color: white;
+    padding: 2px;
+    width: 100px;
+    max-width: 150px;
+    text-align: center;
+}
+
+/* #endregion */
